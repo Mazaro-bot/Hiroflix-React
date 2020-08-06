@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const VideoCardWrapper = styled.div`
   transition: all 0.5s;

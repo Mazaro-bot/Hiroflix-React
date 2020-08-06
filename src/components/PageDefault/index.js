@@ -1,9 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
+import styled, { css } from 'styled-components';
 import Menu from '../Menu';
 import Footer from '../Footer';
-
-import styled, { css } from 'styled-components';
 
 const Main = styled.main`
     background-color: var(--black);
@@ -17,14 +17,14 @@ const Main = styled.main`
     `}
 `;
 
-export default function PageDefault({children, paddingAll}){
-    return(
-        <>
-            <Menu/>
-                <Main paddingAll={paddingAll}>
-                    {children}
-                </Main>
-            <Footer/>
-        </>
-    );
+export default function PageDefault({ children, paddingAll }) {
+  return (
+    <>
+      <Menu />
+      <Main paddingAll={paddingAll}>
+        {children}
+      </Main>
+      <Footer />
+    </>
+  );
 }

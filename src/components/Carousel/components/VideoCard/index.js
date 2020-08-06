@@ -1,6 +1,10 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable import/no-extraneous-dependencies */
 import React, { useCallback, useState } from 'react';
-import { debounce } from "lodash";
-import { VideoCardContainer, VideoCardContainerDiv, ResponsiveIframe, VideoCardWrapper } from './styles';
+import { debounce } from 'lodash';
+import {
+  VideoCardContainer, VideoCardContainerDiv, ResponsiveIframe, VideoCardWrapper,
+} from './styles';
 
 function getYouTubeId(youtubeURL) {
   return youtubeURL
@@ -33,25 +37,25 @@ export default function VideoCard({ videoTitle, videoURL, categoryColor }) {
             url={image}
             href={videoURL}
             target="_blank"
-            style={{ borderColor: categoryColor || "red" }}
+            style={{ borderColor: categoryColor || 'red' }}
             title={videoTitle}
           />
         )) || (
-            <VideoCardContainerDiv
-              style={{ borderColor: categoryColor || "red" }}
-            >
+        <VideoCardContainerDiv
+          style={{ borderColor: categoryColor || 'red' }}
+        >
 
-              <ResponsiveIframe
-                title="Titulo do Iframe"
-                src={`https://www.youtube.com/embed/${getYouTubeId(
-                  videoURL
-                )}?autoplay=1&mute=0`}
-                frameBorder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </VideoCardContainerDiv>
-          )}
+          <ResponsiveIframe
+            title="Titulo do Iframe"
+            src={`https://www.youtube.com/embed/${getYouTubeId(
+              videoURL,
+            )}?autoplay=1&mute=0`}
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </VideoCardContainerDiv>
+        )}
       </VideoCardWrapper>
     </>
   );

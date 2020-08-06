@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import SlickSlider from 'react-slick';
 import styled from 'styled-components';
@@ -25,11 +26,6 @@ const Container = styled.ul`
   .slick-next {
     right: 16px;
   }
-
-  .slick-prev:before,
-  .slick-next:before{
-    color: var(--primary);
-  }
 `;
 
 export const SliderItem = styled.li`
@@ -42,7 +38,6 @@ export const SliderItem = styled.li`
   }
 `;
 
-
 const Slider = ({ children }) => (
   <Container>
     <SlickSlider {...{
@@ -53,7 +48,7 @@ const Slider = ({ children }) => (
       variableWidth: true,
       adaptiveHeight: true,
       autoplay: true,
-      autoplaySpeed: 2000
+      autoplaySpeed: 2000,
     }}
     >
       {children}
@@ -61,4 +56,4 @@ const Slider = ({ children }) => (
   </Container>
 );
 
-export default Slider; 
+export default Slider;

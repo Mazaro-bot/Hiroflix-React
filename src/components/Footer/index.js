@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
 import { FooterBase } from './styles';
 import Logo from '../../assets/img/logo.png';
@@ -11,9 +12,8 @@ function Footer() {
         <img className="Logo" src={Logo} alt="Logo Hiroflix" />
       </a>
       <p>
-        
-          Luis Mazaro
-        
+
+        Luis Mazaro
 
         <p style={{ display: 'flex', justifyContent: 'center' }}>
           <a target="_blank" href="https://www.linkedin.com/in/luis-mazaro-781260136/"><img alt="Linkedin" style={{ width: '32px', margin: '4px' }} src={IconLinkedin} /></a>
